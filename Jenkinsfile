@@ -30,6 +30,7 @@ pipeline {
                 //sh "docker run -d -P -p 4444:4444 --name ${seleniumHub} selenium/hub"
               // sh  "docker run -d -P  -p 5900:5900 --link ${seleniumHub}:hub  --name ${chrome} selenium/node-chrome-debug:3.141.59-yttrium"
               //  sh "docker-compose up"
+              sh "pwd"
         
          }
       }
