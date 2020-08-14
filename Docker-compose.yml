@@ -13,7 +13,7 @@ services:
     environment:
      - HUB_HOST=hub
    bdd:
-    image: suman/selenium-bdd-docker
+    image: vagrant/containertest
     depends on:
        - chrome
     environment:
