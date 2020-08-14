@@ -1,0 +1,25 @@
+version: "3"
+services:
+  hub:
+   image: selenium/hub:3.14
+   ports:
+    - "4444:4444"
+   chrome:
+    image: selenium/node-chrome-debug:3.141.59-yttrium
+    ports:
+    - "5900:5900"
+    depends on:
+     - hub
+    environment:
+     - HUB_HOST=hub
+   bdd:
+    image: suman/selenium-bdd-docker
+    depends on:
+       - chrome
+    environment:
+       - HUB_HOST=hub
+       - BROWSER=chrome
+       - CUCUMBER_OPTIONS=classpath:Features
+       
+    volumes:
+      - ./output:/usr/share/suman/target/cucumebr-reports
