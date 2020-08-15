@@ -62,7 +62,7 @@ pipeline {
                   
                 //  sh "docker-compose up"
                   sh "pwd"
-                    sh "/var/lib/cloudbees-jenkins-distribution/workspace/CucumberUsingTestngDocker/docker-compose run –rm compile"
+                    sh "docker-compose up"
           
                   
                   archiveArtifacts artifacts: 'target/**', fingerprint: true
