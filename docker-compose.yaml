@@ -4,22 +4,21 @@ services:
    image: selenium/hub:3.14
    ports:
     - "4444:4444"
-   chrome:
+  chrome:
     image: selenium/node-chrome-debug:3.141.59-yttrium
     ports:
-    - "5900:5900"
-    depends on:
+     - "5900:5900"
+    depends_on:
      - hub
     environment:
      - HUB_HOST=hub
-   bdd:
+  bdd:
     image: vagrant/containertest
-    depends on:
-       - chrome
+    depends_on:
+      - chrome
     environment:
-       - HUB_HOST=hub
-       - BROWSER=chrome
-       - CUCUMBER_OPTIONS=classpath:Features
-       
+      - HUB_HOST=hub
+      - BROWSER=chrome
+      - CUCUMBER_OPTIONS=classpath:Features
     volumes:
-      - ./output:/usr/share/suman/target/cucumebr-reports
+      - ./output://usr/share/suman/target/cucumber-reports
