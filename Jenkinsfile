@@ -40,7 +40,7 @@ pipeline {
             
            
             steps {
-                sh 'mvn clean package -DskipTests -Dmaven.clean.failOnError=false'
+                sh 'sudo mvn clean package -DskipTests -Dmaven.clean.failOnError=false'
             }
         }
         stage('Build Image') {
@@ -62,7 +62,7 @@ pipeline {
                   
                 //  sh "docker-compose up"
                   sh "pwd"
-                    sh "docker-compose up"
+                    sh "sudo docker-compose up"
           
                   
                   archiveArtifacts artifacts: 'target/**', fingerprint: true
