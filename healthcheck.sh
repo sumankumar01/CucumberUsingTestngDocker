@@ -5,7 +5,8 @@ do
 	sleep 1
 done
 
- java -cp  container-test-tests.jar:libs/* \
-    -DHUB_HOST=$HUB_HOST \
+ java -cp  container-test.jar:container-test-tests.jar:libs/* \
+     -DHUB_HOST=$HUB_HOST \
     -DBROWSER=$BROWSER \
-   -Dcucumber.options="classpath:Features" org.testng.TestNG  -testclass  CucumberOptions.TestRunner
+   -Dcucumber.options="classpath:Features" org.testng.TestNG  -testclass  CucumberOptions.TestRunner /usr/share/suman/
+   
