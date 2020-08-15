@@ -18,8 +18,8 @@ ADD  /target/libs libs
 # ADD health check script
 ADD healthcheck.sh  healthcheck.sh
 
-# BROWSER
-# HUB_HOST
+ENV  BROWSER=chrome
+ENV HUB_HOST=http://192.168.3.12:4444/wd/hub
 # MODULE
 
 ENTRYPOINT sh healthcheck.sh
