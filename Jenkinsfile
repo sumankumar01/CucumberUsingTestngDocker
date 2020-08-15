@@ -62,7 +62,7 @@ pipeline {
                   
                 //  sh "docker-compose up"
                   sh "pwd"
-                    sh "docker-compose up --build"
+                    sh "/var/lib/cloudbees-jenkins-distribution/workspace/CucumberUsingTestngDocker/docker-compose up --build"
           
                   
                   archiveArtifacts artifacts: 'target/**', fingerprint: true
