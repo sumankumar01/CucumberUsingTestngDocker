@@ -16,7 +16,7 @@ ADD  /target/libs libs
 # ADD testng1.xml					not using
 
 # ADD health check script
-ADD healthcheck.sh                      healthcheck.sh
+ADD healthcheck.sh  healthcheck.sh
 
 # BROWSER
 # HUB_HOST

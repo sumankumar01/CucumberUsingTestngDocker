@@ -57,7 +57,7 @@ pipeline {
            
                   // a directory 'search' is created for container test-output
                  // sh "docker run --rm -e SELENIUM_HUB=${seleniumHub} -e BROWSER=chrome  -v ${WORKSPACE}/target:/usr/share/suman/ --network ${network} vagrant/containertest"
-                sh "docker run --rm -e SELENIUM_HUB=${seleniumHub} -e BROWSER=chrome  -v ${WORKSPACE}/target:/usr/share/suman/ vagrant/containertest"
+                //sh "docker run --rm -e SELENIUM_HUB=${seleniumHub} -e BROWSER=chrome  -v ${WORKSPACE}/target:/usr/share/suman/ vagrant/containertest"
                   //archive all the files under 'search' directory
                   
                 //  sh "docker-compose up"
