@@ -61,7 +61,7 @@ pipeline {
                   //archive all the files under 'search' directory
                   
                 //  sh "docker-compose up"
-                  
+                  sh "pwd"
                     sh "docker-compose up"
           
                   
