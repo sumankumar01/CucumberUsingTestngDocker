@@ -62,7 +62,7 @@ pipeline {
                   
                 //  sh "docker-compose up"
                   sh "pwd"
-                    sh "sudo docker-compose up"
+                    sh "docker-compose up"
           
                   
                   archiveArtifacts artifacts: 'target/**', fingerprint: true
